@@ -10,7 +10,7 @@ alias wss='cd /home/prod/scripts/'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+#	. /etc/bashrc
 fi
 
 ######################################################
@@ -115,14 +115,14 @@ echo -e "${CYAN}This is BASH ${RED}${BASH_VERSION%.*}\
 ${CYAN} - Alert ${RED}SMS Sended${NC}\n"
 #./sendsms.pl
 date
-if [ -x /usr/games/fortune ]; then
+if [ -x /usr/bin/fortune ]; then
 #    /usr/games/fortune -s     # Makes our day a bit more fun.... :-)
     /usr/bin/fortune -s  # centos path :D
 fi
 
 function _exit()        # Function to run upon exit of shell.
 {
-  #  echo -e "${RED}Hasta la vista, baby${NC}"
+   echo -e "${RED}Hasta la vista, baby${NC}"
   clear
 }
 trap _exit EXIT
